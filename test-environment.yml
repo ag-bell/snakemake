@@ -6,6 +6,7 @@ dependencies:
   - datrie
   - boto3
   - moto
+  - junit-xml  # needed for S3Mocked
   - httpretty
   - wrapt
   - pyyaml
@@ -14,6 +15,7 @@ dependencies:
   - ftputil
   - pysftp
   - requests
+  - responses <0.12.1 # responses 0.12.1 delivers a "TypeError: cannot unpack non-iterable CallbackResponse object"
   - dropbox
   - numpy
   - appdirs
@@ -49,6 +51,9 @@ dependencies:
   - toposort
   - mamba
   - crc32c
+  - pip:
+    - py-tes
+  - requests-mock
   - peppy
   - eido
   - glpk

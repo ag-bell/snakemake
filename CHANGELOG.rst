@@ -1,3 +1,68 @@
+
+[5.30.0] - 2020-11-23
+=====================
+Added
+-----
+- Benchmarks now also report CPU time (@natir).
+
+Changed
+-------
+- Fixed a reauthentication bug in Kubernetes support (@haizi-zh).
+
+[5.29.0] - 2020-11-19
+=====================
+Changed
+-------
+- Fixed several bugs in reports and scheduler.
+- Remove automatic (but buggy) encoding of csv/tsv files into HTML tables in the report (we will soon have a better alternative).
+- Fixed bug in kubernetes executor occurring with large source files.
+
+[5.28.0] - 2020-11-12
+=====================
+Added
+-----
+- Execution backend for GA4GH TES (task execution scheduler) an abstraction layer for various cluster and cloud queuing systems (@svedziok, @uniqueg).
+- script, notebook, wrapper and cwl directives now permit to use wildcards and params for composing paths (@johanneskoester).
+
+Changed
+-------
+- Restored compatibility with Python 3.5 and 3.6 (@cclienti).
+- Various usability bug fixes (@goi43, @johanneskoester, @dcroote).
+- Better and more secure parsing of values when using --config (@bingxiao).
+
+[5.27.4] - 2020-11-03
+=====================
+Changed
+-------
+- Further speed improvements for DAG computation.
+- Fixed metadata migration errors occuring with long output file paths.
+- Add WorkflowHub specifications to the docs.
+- Fix group assignments.
+
+[5.27.3] - 2020-10-30
+=====================
+Changed
+-------
+- Added missing files to source distribution.
+
+[5.27.2] - 2020-10-30
+=====================
+Changed
+-------
+- DAG computation runtime has been improved by orders of magnitude, it is linear in the number of jobs now (@mhulsmann, @johanneskoester).
+- Stat calls have been dramatically reduced and are now performed in parallel (@johanneskoester).
+- Scheduler fixes (@FelixMoelder).
+- Directory support and other fixes for Google Life Sciences backend (@vsoch, @millerdz).
+- Support for panoptes monitor server (@fgypas).
+- Extended pathlib support (@mbhall88).
+- Vim plugin improvements (@troycomi).
+- Prevent jobs being rerun when input files are marked as ancient and another job in the DAG creates them.
+- Fixed --list-code-changes for included rules (@jbloom).
+
+Added
+-----
+- Syntax highlighting for nano (@baileythegreen).
+
 [5.26.1] - 2020-10-01
 =====================
 Changed
